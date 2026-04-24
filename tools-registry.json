@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-04-25",
+  "tools": {
+    "node": {
+      "label": "Node.js 20 LTS",
+      "chocoPackage": "nodejs-lts",
+      "checkCmd": "node",
+      "version": "20.11.0"
+    },
+    "angular-cli": {
+      "label": "Angular CLI 21",
+      "npmGlobal": "@angular/cli@21",
+      "checkCmd": "ng"
+    },
+    "go": {
+      "label": "Go",
+      "chocoPackage": "golang",
+      "checkCmd": "go"
+    },
+    "dotnet": {
+      "label": ".NET SDK 8",
+      "chocoPackage": "dotnet-8.0-sdk",
+      "checkCmd": "dotnet"
+    },
+    "buf": {
+      "label": "buf (protobuf)",
+      "chocoPackage": "buf",
+      "checkCmd": "buf"
+    },
+    "docker": {
+      "label": "Docker Desktop",
+      "chocoPackage": "docker-desktop",
+      "checkCmd": "docker"
+    },
+    "kubectl": {
+      "label": "kubectl",
+      "chocoPackage": "kubernetes-cli",
+      "checkCmd": "kubectl"
+    },
+    "helm": {
+      "label": "helm",
+      "chocoPackage": "kubernetes-helm",
+      "checkCmd": "helm"
+    }
+  },
+  "tokenMap": {
+    "angular":           ["node", "angular-cli"],
+    "typescript":        ["node"],
+    "go":                ["go"],
+    "golang":            ["go"],
+    "csharp":            ["dotnet"],
+    "aspnet":            ["dotnet"],
+    "dotnet":            ["dotnet"],
+    "grpc":              ["buf"],
+    "protobuf":          ["buf"],
+    "buf":               ["buf"],
+    "graphql":           [],
+    "graphql-federation":[],
+    "mongodb":           [],
+    "redis":             [],
+    "kafka":             [],
+    "oauth2":            [],
+    "jwt":               []
+  }
+}
