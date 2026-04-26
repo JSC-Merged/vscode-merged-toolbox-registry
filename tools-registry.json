@@ -9,7 +9,7 @@
       "versionCmd": "yq --version",
       "versionRegex": "v?(\\d+\\.\\d+\\.\\d+)",
       "healthCmd": "yq --version"
-    }
+    },
     "curl": {
       "label": "curl",
       "chocoPackage": "curl",
