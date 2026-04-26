@@ -1,47 +1,71 @@
 {
-  "version": "1.0.0",
-  "updatedAt": "2026-04-25",
+  "version": "1.1.0",
+  "updatedAt": "2026-04-26",
   "tools": {
     "node": {
       "label": "Node.js 20 LTS",
       "chocoPackage": "nodejs-lts",
       "checkCmd": "node",
-      "version": "20.11.0"
+      "version": "20.11.0",
+      "versionCmd": "node --version",
+      "versionRegex": "v?(\\d+\\.\\d+\\.\\d+)",
+      "healthCmd": "node --version"
     },
     "angular-cli": {
       "label": "Angular CLI 21",
       "npmGlobal": "@angular/cli@21",
-      "checkCmd": "ng"
+      "checkCmd": "ng",
+      "versionCmd": "ng version",
+      "versionRegex": "Angular CLI:\\s+(\\d+\\.\\d+\\.\\d+)",
+      "healthCmd": "ng version"
     },
     "go": {
       "label": "Go",
       "chocoPackage": "golang",
-      "checkCmd": "go"
+      "checkCmd": "go",
+      "versionCmd": "go version",
+      "versionRegex": "go(\\d+\\.\\d+(?:\\.\\d+)?)",
+      "healthCmd": "go env GOROOT"
     },
     "dotnet": {
       "label": ".NET SDK 8",
       "chocoPackage": "dotnet-8.0-sdk",
-      "checkCmd": "dotnet"
+      "checkCmd": "dotnet",
+      "versionCmd": "dotnet --version",
+      "versionRegex": "(\\d+\\.\\d+\\.\\d+)",
+      "healthCmd": "dotnet --info"
     },
     "buf": {
       "label": "buf (protobuf)",
       "chocoPackage": "buf",
-      "checkCmd": "buf"
+      "checkCmd": "buf",
+      "versionCmd": "buf --version",
+      "versionRegex": "(\\d+\\.\\d+\\.\\d+)",
+      "healthCmd": "buf --version"
     },
     "docker": {
       "label": "Docker Desktop",
       "chocoPackage": "docker-desktop",
-      "checkCmd": "docker"
+      "checkCmd": "docker",
+      "versionCmd": "docker --version",
+      "versionRegex": "(\\d+\\.\\d+\\.\\d+)",
+      "healthCmd": "docker info"
     },
     "kubectl": {
       "label": "kubectl",
       "chocoPackage": "kubernetes-cli",
-      "checkCmd": "kubectl"
+      "checkCmd": "kubectl",
+      "versionCmd": "kubectl version --client -o yaml",
+      "versionRegex": "gitVersion:\\s+v?(\\d+\\.\\d+\\.\\d+)",
+      "healthCmd": "kubectl version --client"
     },
     "helm": {
       "label": "helm",
       "chocoPackage": "kubernetes-helm",
-      "checkCmd": "helm"
+      "checkCmd": "helm",
+      "versionCmd": "helm version --short",
+      "versionRegex": "v?(\\d+\\.\\d+\\.\\d+)",
+      "healthCmd": "helm version --short"
     }
   },
   "tokenMap": {
@@ -62,5 +86,6 @@
     "kafka":             [],
     "oauth2":            [],
     "jwt":               []
-  }
+  },
+  "infraTools": ["docker", "kubectl", "helm"]
 }
