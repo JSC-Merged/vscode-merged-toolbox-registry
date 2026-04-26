@@ -2,6 +2,38 @@
   "version": "1.1.0",
   "updatedAt": "2026-04-26",
   "tools": {
+    "yq": {
+      "label": "yq",
+      "chocoPackage": "yq",
+      "checkCmd": "yq",
+      "versionCmd": "yq --version",
+      "versionRegex": "v?(\\d+\\.\\d+\\.\\d+)",
+      "healthCmd": "yq --version"
+    }
+    "curl": {
+      "label": "curl",
+      "chocoPackage": "curl",
+      "checkCmd": "curl",
+      "versionCmd": "curl --version",
+      "versionRegex": "curl\\s+(\\d+\\.\\d+\\.\\d+)",
+      "healthCmd": "curl --version"
+    },
+    "make": {
+      "label": "GNU Make",
+      "chocoPackage": "make",
+      "checkCmd": "make",
+      "versionCmd": "make --version",
+      "versionRegex": "(\\d+\\.\\d+(?:\\.\\d+)?)",
+      "healthCmd": "make --version"
+    },
+    "git": {
+      "label": "Git",
+      "chocoPackage": "git",
+      "checkCmd": "git",
+      "versionCmd": "git --version",
+      "versionRegex": "(\\d+\\.\\d+\\.\\d+)",
+      "healthCmd": "git --version"
+    },
     "node": {
       "label": "Node.js 20 LTS",
       "chocoPackage": "nodejs-lts",
